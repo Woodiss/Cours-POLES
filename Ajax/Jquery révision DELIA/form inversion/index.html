@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+</head>
+<body>
+
+    <form action="">
+
+        <label for="input1">Champ 1:</label>
+        <input type="text" id="input1">
+
+        <label for="input2">Champ 2:</label>
+        <input type="text" id="input2">
+
+        <button onclick="reverseContent()" type="button" >Reverse</button>
+    </form>
+    
+</body>
+
+<script>
+
+    function reverseContent() {
+        const input1 = document.getElementById('input1');
+        const input2 = document.getElementById('input2');
+
+        var change = input1.value;
+
+        input1.value = input2.value;
+        input2.value = change;
+
+    }
+</script>
+</html>

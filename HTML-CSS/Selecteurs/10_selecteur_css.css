@@ -1,0 +1,92 @@
+*{
+    font-family: sans-serif; /*poilice d'écriture*/
+
+}
+
+nav{
+    background: #000;
+    padding: 0 0.5em;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    top: 0; /*position à partir du haut de l'écran*/
+    left: 0; /*position à partir de la gauche de l'écran*/
+    margin: 0 0 20px;
+}
+
+nav a {/* tous les liens à l'intérieur de la balise nav*/
+    float: left; /*éffet flottang à gauche*/
+    text-decoration: none; /*pas d'héritage avec éffet souligné comme c'est standard pour les liens sous tous les navigateurs*/
+    color: beige; /*couleur du texte*/
+    line-height: 2.7em; /*interligne*/
+    padding: 0em 2em; /*marge intérieurs - on les fait dans le sens des aiguilles d'une montre (haut, droite, bas, gauche)*/
+    font-size: 1.2em; /*taille du texte*/
+    transition: 2s; /*temps de transition mors du hover (survol de la souris) : ici 2 secondes*/
+
+}
+
+nav a:hover{ /*tous les liens dans la nav au survol de la souris*/
+    background-color: orange;
+    color: #000;
+}
+
+/* 1er container*/
+.container{
+    width: 70%;
+    margin: 4% auto 2% auto;
+    background-color: aqua;
+    padding: 2em;
+}
+
+mark{
+    background-color: blue;
+}
+
+/*2ème container*/
+.container1{
+    width: 70%;
+    margin: 2% auto; /* 2% auto 2% auto*/
+    background-color: pink;
+    padding: 2%;
+}
+
+/*container 3 et 4 imbriqués dans le conteiner1*/
+.container2, .container3{
+    width: 44.5%;
+    background-color: palevioletred;
+    padding: 2%;
+    float: left;
+    /* animation: tourne 5s infinite; */
+
+
+}
+
+.container2{
+    margin-right: 1.5%;
+
+}
+
+.container3{
+    margin-left: 1.5%;
+}
+
+/* 5eme container*/
+.container4{
+    margin-top: 2em;
+}
+
+.clear{
+    clear:both;
+}
+
+
+@keyframes tourne {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        background-color: aqua;
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}

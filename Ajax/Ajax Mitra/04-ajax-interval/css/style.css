@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    font-family: calibri;
+}
+
+.conteneur {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.block {
+    background-color: #333333;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 22%;
+    margin: 1%;
+}

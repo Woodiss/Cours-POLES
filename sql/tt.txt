@@ -1,0 +1,202 @@
+? (?) : Affiche l'aide. C'est un synonyme de la commande help.
+clear (\c) : Efface l'instruction en cours.
+connect (\r) : Reconnecte au serveur. Des arguments optionnels peuvent être utilisés pour spécifier la base de données (db) et l'hôte (host).
+delimiter (\d) : Définit le délimiteur pour les instructions SQL.
+edit (\e) : Modifie la commande avec l'éditeur défini dans la variable d'environnement $EDITOR.
+ego (\G) : Envoie une commande au serveur MariaDB et affiche le résultat verticalement.
+exit (\q) : Quitte le shell mysql. C'est identique à la commande quit.
+go (\g) : Envoie une commande au serveur MariaDB.
+help (\h) : Affiche l'aide pour les commandes disponibles.
+nopager (\n) : Désactive le paginage et affiche les résultats directement dans la sortie standard.
+notee (\t) : Désactive l'écriture dans un fichier de sortie (outfile).
+pager (\P) : Définit le pagineur (PAGER) pour afficher les résultats des requêtes.
+print (\p) : Affiche la commande en cours.
+prompt (\R) : Change le prompt du shell mysql.
+quit (\q) : Quitte le shell mysql.
+rehash (#) : Reconstruit la table de complétion pour l'autocomplétion.
+source (.) : Exécute un script SQL à partir d'un fichier. Prend le nom du fichier en argument.
+status (\s) : Affiche des informations sur l'état du serveur.
+system (!) : Exécute une commande shell du système d'exploitation.
+tee (\T) : Redirige la sortie vers un fichier (outfile) en plus de l'afficher à l'écran.
+use (\u) : Sélectionne une autre base de données. Prend le nom de la base de données en argument.
+charset (\C) : Change le jeu de caractères (charset). Peut être nécessaire pour traiter des binlogs avec des jeux de caractères multi-octets.
+warnings (\W) : Affiche les avertissements après chaque instruction.
+nowarning (\w) : N'affiche pas les avertissements après chaque instruction.
+
+Pour obtenir de l'aide côté serveur, tapez 'help contents'.
+
+ mysql -u root --
+
+CREATE DATABASE ma_base;
+
+USE ma_base
+
+CREATE TABLE nom_de_la_table(colonne1 type_donnes, colonne2 type_donnes);
+CREATE TABLE utilisateur(    	id INT PRIMARY KEY NOT NULL auto_increment,    
+				nom VARCHAR(100) NOT NULL,    
+				prenom VARCHAR(100) NOT NULL,    
+				email VARCHAR(255) UNIQUE,    
+				date_naissance DATE NOT NULL,       
+				ville VARCHAR(255) NOT NULL,  
+				pays VARCHAR(255) NOT NULL,   
+				code_postal VARCHAR(5) NOT NULL,    
+				nombre_achat INT) NOT NULL;
+
+
+pour motifié le nom d'une
+ALTER TABLER nom_table
+
+Afficher les colonnes nom et prenom du tableau utilisateur
+SELECT nom, prenom FROM utilisateur
+
+ajoute un élément au tableau
+INSERT INTO manger (id_bonbon, id_stagiaire, date_manger, quantite) VALUES (4,7,'2018-09-20', 5);
+
+Afficher la colonne "prenom" du tableau "client"
+SELECT prenom FROM client;
+
++----------+
+| prenom   |
++----------+
+| R?becca  |
+| Aim?e    |
+| Marielle |
+| Hilaire  |
++----------+
+
+
+modifié le prenom et la ville de l'id 5
+UPDATE client SET prenom = 'Delia', ville = 'Poissy' WHERE id='5';
+
+
+Afficher tout les utilisateur du tableau "client" qui on pour ville 'poissy'
+SELECT * FROM client WHERE ville='Poissy';
+
+Afficher tout les utilisateur du tableau "client" qui ont un age plus petit que 30
+ SELECT * FROM client WHERE age < 30;
+
+
+Sélectionne les nom de bonbon une seul fois, et donc supprime les doublons
+SELECT DISTINCT nom_bonbon FROM bonbons;
+
+
+SELECT prenom, yeux FROM stagiaire GROUP BY yeux;
++---------+--------+
+| prenom  | yeux   |
++---------+--------+
+| Jordan  | marron |
+| Mila    | Rouge  |
+| Patrick | vert   |
++---------+--------+
+
+Affiche les prenom du tableau stagiaire qui commence par M
+ select * from stagiaire where prenom like 'M%';
+
+
+Affiche les femme dans l'odre décroisant
+SELECT * FROM stagiaire WHERE genre = 'femme' ORDER BY id_stagiaire DESC;
+
+Selectionne les stagiaire 'homme' par ordre alphabétique décroissant.
+select * from stagiaire where genre='homme' order by prenom desc;
++--------------+---------+--------+-------+
+| id_stagiaire | prenom  | yeux   | genre |
++--------------+---------+--------+-------+
+|           10 | Patrick | vert   | homme |
+|            6 | Nawfel  | marron | homme |
+|            5 | Mickael | marron | homme |
+|            3 | Jordan  | marron | homme |
+|            4 | Adrien  | marron | homme |
++--------------+---------+--------+-------+
+
+Trie les stagiaire en affichant les femme en premier et en classant les couleurs des yeux dans l'ordre alphabétique
+select * from stagiaire order by genre desc, yeux;
++--------------+-----------+--------+-------+
+| id_stagiaire | prenom    | yeux   | genre |
++--------------+-----------+--------+-------+
+|           12 | Jaqueline | Blanc  | femme |
+|           13 | D?lia     | Pink   | femme |
+|           11 | Mila      | Rouge  | femme |
+|            3 | Jordan    | marron | homme |
+|            4 | Adrien    | marron | homme |
+|            5 | Mickael   | marron | homme |
+|            6 | Nawfel    | marron | homme |
+|           10 | Patrick   | vert   | homme |
++--------------+-----------+--------+-------+
+
+Limite l'affichage d'une requête de sélection de tous les stagiaire aux 3 premires résultats
+select * from stagiaire limit 3;
++--------------+---------+--------+-------+
+| id_stagiaire | prenom  | yeux   | genre |
++--------------+---------+--------+-------+
+|            3 | Jordan  | marron | homme |
+|            4 | Adrien  | marron | homme |
+|            5 | Mickael | marron | homme |
++--------------+---------+--------+-------+
+
+
+Limite l'affichage d'une requête de sélection de tous les stagiaire à partir du 3ème résultat et des 5 suivants
+select * from stagiaire limit 5 offset 2;
++--------------+-----------+--------+-------+
+| id_stagiaire | prenom    | yeux   | genre |
++--------------+-----------+--------+-------+
+|            5 | Mickael   | marron | homme |
+|            6 | Nawfel    | marron | homme |
+|           10 | Patrick   | vert   | homme |
+|           11 | Mila      | Rouge  | femme |
+|           12 | Jaqueline | Blanc  | femme |
++--------------+-----------+--------+-------+
+
+affiche les 4 premieres personnes avec les yeux marron
+select * from stagiaire where yeux = 'marron' limit 4;
++--------------+---------+--------+-------+
+| id_stagiaire | prenom  | yeux   | genre |
++--------------+---------+--------+-------+
+|            3 | Jordan  | marron | homme |
+|            4 | Adrien  | marron | homme |
+|            5 | Mickael | marron | homme |
+|            6 | Nawfel  | marron | homme |
++--------------+---------+--------+-------+
+
+Afficher les 4 premiers stagiaires qui ont les yeux marron et en triant les prenom par ordre alphabétique
+select * from stagiaire where yeux = 'marron' order by prenom limit 3;
++--------------+---------+--------+-------+
+| id_stagiaire | prenom  | yeux   | genre |
++--------------+---------+--------+-------+
+|            4 | Adrien  | marron | homme |
+|            3 | Jordan  | marron | homme |
+|            5 | Mickael | marron | homme |
++--------------+---------+--------+-------+
+
+Affiche le nombre de stagiaire dans un tableau avec pour nom "nombre_stagiaire"
+SELECT COUNT(*) AS nombre_stagiaires FROM stagiaire;
++-------------------+
+| nombre_stagiaires |
++-------------------+
+|                 8 |
++-------------------+
+
+SELECT COUNT(*) FROM stagiaire;
++----------+
+| COUNT(*) |
++----------+
+|        8 |
++----------+
+
+affiche uniquement le nombre d'homme du tableau stagiaire dans un tableau nommé "nb_stagiaire_H"
+SELECT COUNT(genre = "homme") AS nb_stagiaires_H FROM stagiaire;
++-----------------+
+| nb_stagiaires_H |
++-----------------+
+|               8 |
++-----------------+
+
+Affiche les prénoms de ceux qui ont manger ainsi que la quantité de bonbon manger
+SELECT s.prenom, m.quantite
+FROM stagiaire s
+JOIN manger m ON s.id_stagiaire = m.id_stagiaire;
++---------+----------+
+| prenom  | quantite |
++---------+----------+
+| Adrien  |        5 |
+| Patrick |        5 |
++---------+----------+

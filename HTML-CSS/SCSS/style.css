@@ -1,0 +1,52 @@
+body {
+  background: #000;
+}
+body h1 {
+  color: aqua;
+}
+
+main {
+  background: pink;
+}
+main .text {
+  width: 250px;
+  background: green;
+}
+main .text p {
+  font-size: 20px;
+  color: rgb(217, 255, 3);
+}
+main .text h3 {
+  font-weight: bold;
+}
+main .text span {
+  background: aliceblue;
+}
+
+.div {
+  color: rouge;
+}
+
+.grid-1 {
+  width: 100px;
+}
+
+.grid-2 {
+  width: 200px;
+}
+
+.grid-3 {
+  width: 300px;
+}
+
+.grid-4 {
+  width: 400px;
+}
+
+.grid-5 {
+  width: 500px;
+}
+
+.grid-6 {
+  width: 600px;
+}/*# sourceMappingURL=style.css.map */

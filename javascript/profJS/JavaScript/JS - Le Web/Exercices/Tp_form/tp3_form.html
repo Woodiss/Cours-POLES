@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tp3_form.css">
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <label for="nom">Nom :</label>
+            <p class="nom text"></p>
+            <input type="text" id="nom" name="nom">
+
+            <label for="prenom">Prénom :</label>
+            <p class="prenom text"></p>
+            <input type="text" id="prenom" name="prenom">
+
+            <div class="genre">
+                <p>Genre :</p>
+                <p class="genree text"></p>
+                <div class="genres">
+
+                    <div class="homme">
+                        <label for="homme">Homme</label>
+                        <input type="radio" id="homme" name="genre" value="homme">
+                    </div>
+                    
+                    <div class="femme">
+                        <label for="femme">Femme</label>
+                        <input type="radio" id="femme" name="genre" value="femme">
+                    </div>
+                    
+                    <div class="tracto">
+                        <label for="tract">Tractopelle</label>
+                        <input type="radio" id="tract" name="genre" value="tracto">
+                    </div>
+                </div>
+            </div>
+
+            <label for="age">Age :</label>
+            <p class="age text"></p>
+            <input type="number" id="age" name="age" min="5" max="140">
+
+            <label for="email">Email :</label>
+            <p class="email text"></p>
+            <input type="email" id="email" name="email">
+
+            <label for="mdp1">Mot de passe :</label>
+            <p class="mdp1 text"></p>
+            <input type="password" id="mdp1" name="mdp1">
+            
+            <label for="mdp2">Confirmation mot de passe :</label>
+            <p class="mdp2 text"></p>
+            <input type="password" id="mdp2" name="mdp2">
+            
+            <label for="pays">Sélectionnez votre pays :</label>
+            <p class="pays text"></p>
+            <select name="pays" id="pays">
+                <option value="default">Listes des pays</option>
+                <option value="france">France</option>
+                <option value="italie">Italie</option>
+                <option value="maroc">Maroc</option>
+                <option value="allemagne">Allemagne</option>
+                <option value="espagne">Espagne</option>
+                <option value="belgique">Belgique</option>
+            </select>
+
+            <label for="newletter">Voulez vous recevoir les Newletter</label>
+            <input type="checkbox" id="newletter" style="width: 100%;">
+
+            <label for="comms">A propos de moi</label>
+            <textarea name="" id="comms" cols="30" rows="10"></textarea>
+
+            <button id="valider">Valider</button>
+            <button id="reset">Réinitialiser</button>
+            <p class="verif text"></p>
+
+        </form>
+    </div>
+
+
+    <script src="tp3_form.js"></script>
+</body>
+
+</html>

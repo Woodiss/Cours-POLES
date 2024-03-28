@@ -1,0 +1,35 @@
+// ====== ACTIVITÉ COURS =====
+
+-> Activité de groupe (par 2)
+
+=> PARTIE 1
+
+- Dessiner l'arbre du DOM de la page activite-cours.html (voir exemple: image-DOM)
+- Utilise un carré pour représenter les éléments HTML, comme <body> ou <p>. 
+- Utilise un rond pour representer le contenu textuel de la page. 
+(Les éléments contenant du texte peuvent seulement etre représenter par "#text")
+
+
+=> PARTIE 2
+Faites des recherches sur les sélecteurs JS
+- Faites une liste des principaux sélecteurs JS (il y en a 5 ! )
+- Ecrivez pour chacun d'eux leur fonction
+
+
+document.getElementById()          // récupére via l'id
+document.getElementsByClassName()  // récupére via la class
+document.getElementsByTagName()    // récupére directement la balise
+document.querySelector()           // récupére avec les sélecteur CSS
+document.querySelectorAll()        // récupére plusieurs élements avec les sélecteur CSS
+
+
+
+=> PARTIE 3
+Compléter le code dans activite-cours.js
+Faites des recherches pour compléter vos connaissances
+
+
+NOTE : Un petit challenge, ça vous dit ? :-)
+
+Faites valider chaque étape avant de continuer la suivante afin 
+que ton équipe remporte la manche !

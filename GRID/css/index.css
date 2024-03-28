@@ -1,0 +1,134 @@
+.wrapper0, .wrapper1{
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 3vh;
+}
+
+.wrapper2{
+    width: 500px;
+    margin: 0 auto;
+}
+
+div:not(p){
+    color: antiquewhite;
+}
+
+.wrapper {
+    width: 500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5,100px);
+    grid-template-rows: repeat(5,100px);
+}
+
+.c{
+    background-color: #97d8b2;
+}
+
+div.c{
+    border: 2px solid #861d78;
+}
+
+div.vide{
+    border: 2px solid #0f218b;
+}
+
+.wrapper0, .wrapper1{
+    display: grid;
+    /* emmet = gtc + tab */
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    grid-gap: 3px;
+}
+
+.wrapper0 div{
+    background-color: #531253;
+}
+
+div.wrapper1 div:nth-child(1){
+    background-color: #170312;
+    /* ma 1ere div commence a la 1ere ligne de la grille */
+    grid-column-start: 1;
+    /* ma 1ere div fini à la 1ere ligne de la grille */
+    grid-column-end: 3;
+    /* on peur écrire plus seimplement avec => grid-column: 1 / 3; */
+    /* /!\ se positionnement "pousse" les div suivantes à la ligne suivante */
+}
+
+div.wrapper1>div:nth-child(2){
+    background-color: #531253;
+}
+
+div.wrapper1>div:nth-child(3){
+    background-color: #531253;
+    /* ce qui revien à => grid-row-start: 2; et grid-row-end: 4; */
+    grid-row: 2 / 4;
+}
+
+div.wrapper1>div:nth-child(4){
+    background-color: #a0acad;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    /* ou grid-column: 2 / 4 */
+}
+
+div.wrapper1>div:nth-child(5){
+    background-color: #97d8d2;
+}
+
+div.wrapper1>div:nth-child(6){
+    background-color: #055864;
+}
+
+#img{
+    background: url(../img/bkg.jpg);
+}
+
+
+.wrapper2{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px;
+    grid-template-rows: 100px;
+    grid-gap: 3px;
+    text-align: center;
+    line-height: 6rem;
+    font-family: fantasy;
+}
+
+.wrapper2>div{
+    background-color: #97d8b2;
+}
+
+#gauche, #droite{
+    grid-row: 1/6;
+    background-color: #531253;
+    color: white;
+}
+
+#droite{
+    grid-column: 5/6;
+}
+
+.c1{
+    grid-column: 2/4;
+}
+
+.c2{
+    grid-column: 4/5;
+    grid-row: 2/4;
+}
+
+.c3{
+    /* n'as pas besoin de "grid-column"  car il étais deja bien palcer*/
+    grid-row: 3/5;
+}
+
+.c5{
+    grid-column: 3/5;
+}
+
+#cd, #cg{
+    /* span 3 permet de faire comprendre a la div quel doit prendre 3 colonne */
+    grid-column: span 3;
+    background: #055864;
+}

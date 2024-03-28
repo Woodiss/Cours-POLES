@@ -1,0 +1,10 @@
+<h2>Mon Post</h2>
+
+<li>
+  <h4>{{ titre }}</h4>
+  <p>{{ contenu }}</p>
+  <textarea name="" id="" cols="30" rows="3" [(ngModel)]="comms"></textarea>
+  <p>Commentaire : {{ comms }}</p>
+  <button (click)="clicLike()" [ngClass]="{'d-none': show === true}">J’aime</button>
+  <button class='nolike' (click)="clicDislike()" [ngClass]="{'d-none': show === false}">Je n'aime pas</button>
+</li>

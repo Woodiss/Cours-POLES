@@ -1,0 +1,58 @@
+/*commentaires en CSS*/
+
+*{/*l'étoile ou asterisque signifie qu'on selectionne tout le document, c'est un sélecteur universel*/
+    text-align: right;
+}
+
+body{
+    background-color: #f5deb3; /*couler du fond*/
+}
+
+header{
+    background-color: #900c3f;
+    color: #fff; /*couleur du texte*/
+    height: 200px; /*hauteur fixée a 100 pixels*/
+}
+
+nav{
+    background-color: #daf7a6;
+    height: 60px;
+}
+
+section{
+    background:navy ;
+    height: 550px;
+    
+}
+
+article{
+    background-color: #ff5733;
+    height: 65px;
+}
+
+footer{
+    background-color: #daf7a6;
+    height: 75px;
+}
+
+nav, footer{
+    /*je sépare les différents balises à sélectionner par des virgules*/
+    color: #a93226;
+}
+
+.jaune{
+    /*pour sélectionner une class en CSS, j'utilise un point avant le nom que je lui est donné*/
+    background-color: yellow;
+}
+
+#noir{                                                             
+    /*Pour cibler l'id, j'utilise un # (diése)*/
+    background-color: black;
+    color: white;
+    text-align: justify;
+    font-size: 25px;
+}
+
+/* selecteurs => classe, id, balises*/
+/* propriété => color, text-align, font-size...*/
+/* valeurs => red, justify, 25px...*/

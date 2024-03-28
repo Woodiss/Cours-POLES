@@ -1,0 +1,64 @@
+ajout du bundle pour les images
+https://github.com/dustin10/VichUploaderBundle/blob/master/docs/installation.md
+composer require vich/uploader-bundle
+y
+suivre les étape de
+https://github.com/dustin10/VichUploaderBundle/blob/master/docs/usage.md
+allais dans config/packages/vich_uploader.yams et décommenter
+    mappings:
+       products:
+           uri_prefix: /images/products
+           upload_destination: '%kernel.project_dir%/public/images/products'
+           namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true
+les "products" peuvent être changer
+
+
+
+
+
+allais dans src/entity/Nom_Entity.php
+ajouter les deux use
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+et
+#[Vich\Uploadable]
+au dessus de class Nom_entity
+ajouter
+    // NOTE: This is not a mapped field of entity metadata, just a simple property.
+    #[Vich\UploadableField(mapping: 'products', fileNameProperty: 'image', size: 'imageSize')]
+    private ?File $imageFile = null;
+dans le meme fichier en dessous de 
+    private ?string $image = null;
+modifier 'products' par le nom dans le mapping
+modifier 'imageName' par le nom de la variable du private(ici 'image')
+modifier/supprimer size 
+ajouter les méthodes
+     /**
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile|null $imageFile
+     */
+ public function setImageFile(?File $imageFile = null): void
+    {
+        $this->imageFile = $imageFile;
+    }
+
+    public function getImageFile(): ?File
+    {
+        return $this->imageFile;
+    }
+
+
+
+
+
+allais dans src/Form/nom_du_form.php
+https://github.com/dustin10/VichUploaderBundle/blob/master/docs/form/vich_file_type.md
+et modif le ->add('image') par
+->add('imageFile', VichImageType::class);
+et ajouter
+use Vich\UploaderBundle\Form\Type\VichImageType;
+
+

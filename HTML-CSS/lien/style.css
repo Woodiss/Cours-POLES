@@ -1,0 +1,10 @@
+.code{
+    color: red;
+    background: #000;
+    display: inline-block; /* permet de définir une largeur et une hauteur sur l'élément*/
+    font-style: italic;
+}
+
+.miaou{
+    width: 50%;
+}

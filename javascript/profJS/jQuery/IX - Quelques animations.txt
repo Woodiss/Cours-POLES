@@ -1,0 +1,26 @@
+
+======= ANIMATIONS COURANTES =======
+
+=> Essaye de comprendre les animations suivantes et de les reproduire
+
+
+
+>>>>> Slider avec flèches de navigation <<<<<
+
+    https://www.youtube.com/watch?v=sJ8rbJvaKOU
+
+
+
+>>>>>> Infinite slideshow <<<<<
+
+    https://www.creativejuiz.fr/blog/tutoriels/infinite-slideshow-quelques-lignes-jquery
+
+
+
+>>>>>> Infinite Scrolling <<<<<
+
+    https://www.sitepoint.com/jquery-infinite-scrolling-demos/
+
+    Exemples:
+        1 - https://codepen.io/SitePoint/pen/JGQPPa
+        2 - https://codepen.io/velopert/pen/grRAbQ

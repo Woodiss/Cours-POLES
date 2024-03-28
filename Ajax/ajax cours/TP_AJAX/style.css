@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 60%;
+    margin: 200px auto;
+}
+
+.top-facture {
+    display: flex;
+
+}
+
+.top-facture div {
+    width: 50%;
+}
+
+.right-top div:nth-of-type(1) {
+    width: 200px;
+    height: 70px;
+    background: grey;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.table table {
+    margin-top: 100px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid black;
+}
+
+.table table th {
+    background: rgb(172, 65, 172);
+}

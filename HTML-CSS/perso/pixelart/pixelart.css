@@ -1,0 +1,39 @@
+table{
+    margin: auto;
+    border-collapse: collapse;
+    font-size: 40px;
+}
+
+td{
+    border: px solid gray;
+    width: 30px;
+    height: 30px;
+}
+
+.n{
+    background-color: black;
+}
+
+.b{
+    background-color: rgb(0, 132, 255);
+}
+
+.p{
+    background-color: pink;
+}
+
+.a{
+    background-color: aqua;
+}
+
+.w{
+    background-color: white;
+}
+
+td:not(n,b,p,a){
+    background-color: gray;
+}
+
+svg{
+    margin: auto;
+}

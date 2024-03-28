@@ -1,0 +1,27 @@
+// déclarer une variable
+$couleur: red;
+
+// créer une condition
+div {
+  @if $couleur == red {
+    color: $couleur;
+  } @else if $couleur == blue {
+    color: $couleur;
+  } @else {
+    color: black;
+  }
+}
+
+
+// boucle for
+@for $i from 1 through 6 {
+    .grid-#{$i} {
+        width: 100px*$i;
+    }
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

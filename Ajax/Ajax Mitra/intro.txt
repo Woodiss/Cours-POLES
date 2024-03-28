@@ -1,0 +1,14 @@
+Ce n'est pas un langage mais plusieurs
+Utilité => améliorer l'expérience utilisateur
+
+Asynchrone
+Javascript      (Json aujourd'hui)
+And
+Xml
+
+
+
+
+Ex : fil d'actu FaceBook
+
+Mise à jour des données sans rechargement de page par l'utilisateur

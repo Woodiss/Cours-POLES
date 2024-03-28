@@ -1,0 +1,57 @@
+1. DL de composer
+   https://getcomposer.org/
+
+2. install scoop
+   https://scoop.sh/
+   (commande à mettre dans powerShell)
+   Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+   irm get.scoop.sh | iex
+   (on relance vsCode)
+
+3. install CLI symfony
+   https://symfony.com/download
+   (commande à mettre dans bash en étant dans le bon dossier)
+   scoop install symfony-cli
+
+4. créer le projet
+   (commande à mettre dans bash)
+   composer create-projet symfony/website-skeleton nom_projet
+
+5. créer un controller
+   (commande, à mettre dans bash)
+   symfony console make:controller HomeController
+   le controller sera ajouté dans nom_projet/src/Controller
+
+6. commande pour lancer le serveur
+   (en étant dans le dossier du projet)
+   symfony server:start
+
+
+
+7. créer une base de donner
+   7.1 aller dans le fichier .env commenté la ligne 28 (# DATABASE_URL="postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=15&charset=utf8")
+       décommenter la ligne 27 et là modifier le "changeMe" par "root" (DATABASE_URL="mysql://root:@127.0.0.1:3306/app?serverVersion=8&charset=utf8mb4")
+       (ChangeMe = root // app = nom de la base)
+
+   7.2 symfony console doctrine:database:create
+
+8. créer des tables pour la base de donnee
+   8.1 créer la requete pour créer une table
+   symfony console make:entity nom_table
+   un fichier ce créer dans "nom_projet/src/Entity" et dans "nom_projet/src/Repository"
+   il y aura des questions pour savoir comment config les colonnes de la tables (mettre relation au moment du choix du type pour créer une relation)
+   (cette commande pour être exécuté a nouveau pour ajouté une colonne)
+   
+   8.2 préparer l'envoie de la requete
+   symfony console make:migration
+   un fichier est créer dans nom_projet/config/migration
+   (si y'a l'erreur : The metadata storage is not up to date, please run the sync-metadata-storage command to fix this issue.) voici la commande: php bin/console doctrine:schema:update --force
+
+   8.3 envoie de la commande
+   symfony console doctrine:migrations:migrate
+   ajoute la table créer dans PHPMyAdmin, ainsi que deux autres tables
+
+9. créer un formulaire
+    symfony console make:form nom_form_Type  (ont met le nom du formulaire suivis de "Type")
+    spécifié à quel table le formulaire est lié
+   

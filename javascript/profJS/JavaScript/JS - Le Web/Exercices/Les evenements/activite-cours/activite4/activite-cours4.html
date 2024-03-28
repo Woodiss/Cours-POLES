@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <style>
+    body {
+        padding: 50px;
+    }
+    form, #result {
+        margin: auto;
+        margin-bottom: 20px;
+        width: 300px;
+        padding: 20px;
+        border: 1px solid black;
+    }
+    span {
+        margin: 10px;
+    }
+    </style>
+  </head>
+  <body>  
+    <form>
+      <div><input type="text" id="name" placeholder="Nom"/></div>
+      <div>
+        <select id="gender">
+          <option>Choisissez une valeur</option>
+          <option value="male">Homme</option>
+          <option value="female">Femme</option>
+          <option value="other">Autre</option>
+        </select>  
+      </div>
+    </form>
+    
+    <div id="result">
+      Nom : <span id="res-name"></span><br />
+      Genre : <span id="res-gender"></span><br />
+      Souris Client: (<span id="mouse-x"></span>, <span id="mouse-y"></span>)<br>
+      Souris Offset: (<span id="mouse-x2"></span>, <span id="mouse-y2"></span>)
+    </div>
+    
+    <script type="text/javascript" src="activite-cours4-consigne.js"></script>
+  </body>
+</html>
+

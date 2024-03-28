@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      InstantsGram
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  <h1>Share your moments</h1>
+  <div class="containerCard">
+
+    <app-instants *ngFor="let element of post" [src]="element.src" [titre]="element.titre" [contenu]="element.contenu"></app-instants>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,6 @@
+cachier des charges
+modelisation base de données
+architecture MVC
+methode merise
+maquette
+et méthode diagramme uml

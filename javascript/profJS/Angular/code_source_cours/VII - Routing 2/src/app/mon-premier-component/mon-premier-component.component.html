@@ -1,0 +1,8 @@
+<h2>Liste de présence</h2>
+<li class="list-group-item" *ngFor="let student of presenceTab">
+  <p>Etudiant : {{ student.name }} -- Statut : {{ student.status }}</p>
+
+  <a routerLink="/presences/{{ student.id }}">
+    Voir fiche : {{ student.id }} - {{ student.name }}
+  </a>
+</li>

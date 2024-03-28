@@ -1,0 +1,14 @@
+======= EXERCICE - JQUERY ========
+
+=> Application du cours
+
+Voici ce que ton code doit permettre de faire :
+
+
+1 - Ajoute la class newClass au paragraphe #p1, #p3. Ils doivent s'afficher en bleu
+2 - Créer un bouton qui permet de mettre en gras le paragraphe #p2 
+et de supprimer ce caractère en gras quand on clique dessus
+3 - Change le background du paragraphe 4 en jaune
+
+
+Bon courage !

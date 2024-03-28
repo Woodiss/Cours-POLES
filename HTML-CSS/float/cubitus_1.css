@@ -1,0 +1,46 @@
+.v, .b, .p, .i, .r, .w{
+    height: 10em; /*h10m*/
+    width: 10em; /*w10em*/
+    border: 0.2em solid black; /*bd0.2em*/
+    margin: 0.2em; /*m0.2em*/
+    float: left; /* fl */
+    text-align: center; /* tac */
+    border-radius: 20%;  /*pour arrondir*/
+    font-style: 120%; /*fs120%*/
+    color: black;
+}
+
+.v{
+    background-color: darkgreen;
+    border-radius: 20% 20% 50% 50%;
+}
+.b{
+    background-color: aqua;
+    border-radius: 50% 0% 50% 0%;
+}
+
+.p{
+    background-color: aquamarine;
+    border-radius: 50%;
+}
+
+.i{
+ background-color: pink;
+ border-radius: 20% 50% 20% 50%;
+}
+
+.r{
+    background-color: darkred;
+    border-radius: 20% 40% 20% 40%;
+}
+
+.w{
+    background-color: white;
+    border: 0.2em solid white;
+
+}
+
+
+.clear{
+    clear: both;  /*clb*/
+}

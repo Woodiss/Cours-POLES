@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="all">
+        <p class="score1">0</p>
+        
+        <div class="morpion">
+            <div class="ligne1">
+                <div class="case1 case"></div>
+                <div class="case2 case"></div>
+                <div class="case3 case"></div>
+            </div>
+
+            <div class="ligne2">
+                <div class="case4 case"></div>
+                <div class="case5 case"></div>
+                <div class="case6 case"></div>
+            </div>
+            
+            <div class="ligne3">
+                <div class="case7 case"></div>
+                <div class="case8 case"></div>
+                <div class="case9 case"></div>
+            </div>
+        </div>
+
+        <p class="score2">0</p>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- <i class="fa-solid fa-x"></i> -->
+    <!-- <i class="fa-solid fa-o"></i> -->
+
+    <div class="btn">
+        <button class="btnResetPartie" onclick="resetParti()">Nouvelle Partie</button>
+        <button class="btnResetScore" onclick="resetScore()">Reset Score</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+body{
+background: url(https://media.giphy.com/media/U8iiB9GBdt5t9n1I6J/giphy.gif);
+background-position: center center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+table{
+    color: blue;
+    border-right: 10px dotted #000;
+    padding: 100px 10px;
+
+}

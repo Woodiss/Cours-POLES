@@ -1,0 +1,15 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+
+home:
+    path: /
+    controller: App\Controller\HomeController::index
+
+agences_list:
+    path: /agences
+    constroller: App\Controller\AgencesController::listAgences
+    methods: [GET]
+    requirements:
+        _format: html
+        

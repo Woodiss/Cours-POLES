@@ -1,0 +1,80 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.pulse-anim {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: black;
+  margin: 100px auto 0;
+  box-shadow: 0 0 0 0 black;
+  animation: pulse 1.3s infinite;
+}
+
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 18px rgba(30, 32, 163, 0.842);
+  }
+}
+
+.nope-anim {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: black;
+  margin: 100px auto 100px;
+  cursor: pointer;
+animation: nope 2s infinite;
+}
+
+@keyframes nope {
+  0% {
+    transform: translateX(0px);
+  }
+
+  20% {
+    transform: translateX(-100px);
+  }
+
+  40% {
+    transform: translateX(100px);
+  }
+
+  50% {
+    transform: translateY(100px);
+  }
+
+  60% {
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(100px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.cube {
+  height: 150px;
+  width: 150px;
+  background-color: red;
+  margin: 100px auto 100px;
+  background: url(https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg);
+  background-size: cover;
+  animation: tourne 5s infinite;
+}
+
+@keyframes tourne {
+  from { transform: rotate(0deg);
+  } to{
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}

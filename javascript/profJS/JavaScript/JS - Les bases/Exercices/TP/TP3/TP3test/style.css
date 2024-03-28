@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../TP3test/img/Screenshot_3.png);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#perso {
+    background-image: url(../TP3test/img/chevalier.png);
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 130px;
+    background-size: contain;
+    position: absolute;
+}
+
+#consigne {
+    width: 100vw;
+    height: 80px;
+    background: white;
+    border: 9px solid rgb(88, 88, 88);
+    padding: 7px;
+    padding-right: 110px;
+
+    position: fixed;
+    bottom: 0;
+}
+
+#consigne p {
+    font-family: arial;
+    font-size: 1.4rem;
+}
+
+.nomjoueur {
+    z-index: 1;
+    padding: 6px;
+
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%);
+
+    background: rgb(88, 88, 88);;
+    display: flex;
+    align-items: center;
+}
+
+.nomjoueur input {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.nomjoueur button {
+    font-size: 1.5rem;
+    padding: 5px;
+}
+
+#next {
+    width: 90px;
+    height: 50px;
+    font-size: 1.2rem;
+    padding: 5px;
+    background: rgb(32, 32, 32);
+    color: white;
+    z-index: 1;
+
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+
+.none {
+    display: none;
+}
+
+#attaque, #defense {
+    height: 50px;
+    width: 70px;
+    color: white;
+    background: rgb(32, 32, 32);
+    box-shadow: -6px 9px 7px 4px black;
+    position: absolute;
+    left: 500px;
+}
+
+#attaque {
+    top: 335px;
+}
+
+#defense {
+    top: 585px;
+}
+
+.ennemi {
+    position: absolute;
+    right: -500px;
+    top: 200px;
+    transition: all 5s;
+}
+
+.deplacement  {
+    transition: all 5s;
+    transform: translateX(-600px)
+}
+
+.pdvjoueur, .pdvadversaire {
+    font-size: 5rem;
+    font-weight: bold;
+    font-family: arial;
+    position: absolute;
+    top: 200px;
+
+}
+
+.pdvjoueur {
+    left: 420px;
+}
+
+.pdvadversaire {
+    right: 200px;
+}
+

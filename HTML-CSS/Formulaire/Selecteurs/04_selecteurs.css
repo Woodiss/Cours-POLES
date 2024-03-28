@@ -1,0 +1,76 @@
+body{
+    font-size: 25px; /* taille de police de 25pixels */
+}
+
+h1{
+    background-color: darkslategrey; /* couleur du fond*/
+    color: white; /* couleur du texte */
+}
+
+section p{        /* si ont met section, p ça prendras en compte les balises "sections" ET les balises <p>*/
+    color: red; /*tout les <p> à l'intérieur de la balise <section> */
+}
+
+section p:first-child{
+    color: darkviolet; /* s'applique au premier <p> dans section */
+}
+
+section p:last-child{
+    color: lightpink; /* s'applique au dernier <p> dans section */
+}
+
+section p:nth-child(even){ /* numero de l'enfant*/ 
+    /*even pour les <p> paires*/
+    color: lightskyblue; 
+}
+
+section p:nth-child(odd){
+    /* odd pour les <p> impaire*/
+    color: darkblue;
+}
+
+section p:nth-child(3),section p:nth-child(10){
+    /*deux selecteurs séparé par une virgule, les <p> numéro 3 et 10*/
+    color: red;
+}
+
+.zone1{
+    color: #abc123;
+}
+
+.zone2{
+    color: #d85518;
+}
+
+.lime{ /* "lime" est une class donc je met un . avant son nom*/
+    color: lime;
+}
+
+#zone3{/*c'est un ID donc avant son nom "zone3" je met un # */
+    background-color: aqua;
+}
+
+#zone3:before{  /* r'ajoute du contenue avant l'id "zone3" */
+    content: "rajouté avant"; /* le content est obligatoire, les contneus ne s'affichent pas dans le html => attention accessibilité, on peut le laisser vide on peut même r'ajouter des attrivuts à une balise attr(titre)*/
+    background-color: chocolate;
+}
+
+#zone3::after{ /*rajouter du contenu après l'id "zone3"*/
+    content: "ajouté après";
+}
+
+li:nth-of-type(2){ 
+    /* différence entre "nth child" et "nth of type"
+    nth child => pour tout sauf les liste
+    nth of type=> seulement pour les listes
+    https://css-tricks.com/the-difference-between-nth-child-and-nth-of-type/    */
+
+}
+
+.zone4 span{ /*sélectionne la balise <span> qui est modifié par la CLASS "zone4" */
+    font-size: 40px;
+}
+
+.span:not(.lime){ /* permet de sélectionner la balise <span> qui N'A PAS la class "lime"*/
+    font-weight: bold; /* bold est l'équivalent de <STONG> (donc en gras) mais en CSS */
+}

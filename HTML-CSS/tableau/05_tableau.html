@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau</title>
+    <link rel="stylesheet" href="05_tableau.css">
+</head>
+<body>
+    <table>
+        <caption>Ventes</caption><!-- Titre du tableau (céllules fusionnées)-->
+        <thead><!-- en-tête du tableau -->
+            <tr> <!-- tr => rang( t = tableau/ r= row => rangée) -->
+                <th>Jour</th> <!-- th => titres ou en-têtes t => tableau // h => head -->
+                <th>Smartphone</th>
+                <th>Tablette</th>
+                <th>Portable</th>
+            </tr>
+
+            <tfoot> <!--tfoot => bas/fin de tableau /!\ les normes W3C mettend la balise tfoot avant celle du corps du tableau tbody-->
+                <tr>
+                    <td>Total</td> <!--td => céllules -->
+                    <td>22</td>
+                    <td>24</td>
+                    <td>26</td>
+                </tr>
+            </tfoot>
+
+            <tbody>
+                <tr>
+                    <td>Lundi</td>
+                    <td>2</td>
+                    <td>0</td>
+                    <td>6</td>
+                </tr>
+
+                <tr>
+                    <td>Mardi</td>
+                    <td>0</td>
+                    <td>45</td>
+                    <td>1</td>
+                </tr>
+
+                <tr>
+                    <td>Mercredi</td>
+                    <td>8</td>
+                    <td>0</td>
+                    <td>6</td>
+                </tr>
+
+                <tr>
+                    <td>Jeudi</td>
+                    <td>2</td>
+                    <td>9</td>
+                    <td>6</td>
+                </tr>
+
+                <tr>
+                    <td>Vendredi</td>
+                    <td>2</td>
+                    <td>50</td>
+                    <td>6</td>
+                </tr>
+
+                <tr>
+                    <td>Samedi</td>
+                    <td>6</td>
+                    <td>8</td>
+                    <td>12</td>
+                </tr>
+
+                <tr>
+                    <td>Dimanche</td>
+                    <td>8</td>
+                    <td>3</td>
+                    <td>12</td>
+                </tr>
+
+                
+            </tbody>
+
+        </thead>
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formation AJAX</title>
+    <script src="script12.js"></script>
+</head>
+<body onload="envoyerRequeteRecherteCategories()">
+    <h1>Choisir une catégorie</h1>
+
+    <label for="saisie">Saisir la catégorie</label>
+    <input type="text" id="saisie" onkeyup="envoyerRequeteRecherteCategories()" />
+
+    <br/>
+
+    <select id="cat" onchange="envoyerRequeteRechercheProduits()">
+    </select>
+
+    <br/>
+
+    <select id="produits" onchange="envoyerRequeteRecherchePrix()">
+    </select>
+
+    <div>
+       Le prix du produit sélectionné est :
+        <span id="prix" style="color: red"></span>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+.carte{
+    width: 48.2%;
+    margin: 0 auto;
+    border: 1px solid #000;
+    height: 800px;
+    
+}
+
+div p{
+    color: gray;
+    text-align: center;
+}
+
+.asso{
+    margin: 0 auto;
+}

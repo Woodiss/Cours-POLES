@@ -1,0 +1,42 @@
+#carousel-container {
+    width: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 500px;
+    display: flex;
+}
+
+
+
+#prev-btn,
+#next-btn {
+    cursor: pointer;
+    position: absolute;
+    border: none;
+    background: #55555577;
+    width: 60px;
+    height: 50px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+#prev-btn {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#next-btn {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+img{
+    width: 500px;
+}

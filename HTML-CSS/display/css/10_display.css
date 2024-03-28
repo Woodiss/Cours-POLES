@@ -1,0 +1,17 @@
+h1, h3, div, a, p, span, section{
+    text-align: center;
+    border: 1px solid orchid;
+    background: lightblue;
+}
+
+.block{
+    display: block; 
+    /* on modifie l'affichage normal de la balsie qui est de type INLINE pour qu'elle deviennes comme une balise BLOCK */
+    /* block => prend toute la largeur de la ligne */
+}
+
+.inline{
+    display: inline; 
+    /* on modifie l'affichage normal de la balise div qui est de type BLOCK pour qu'elle deviennes comme une balise INLINE*/
+    /* Inline => s'arrête au bout du text */
+}
